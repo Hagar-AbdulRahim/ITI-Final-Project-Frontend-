@@ -130,4 +130,32 @@ const Login = () => {
               </div>
             </div>
 
-          ذ
+            <Button type="submit" disabled={loading} className="w-full py-3 mt-2">
+              {loading ? 'جاري الدخول...' : 'تسجيل الدخول'}
+            </Button>
+
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-px w-16 bg-gray-200"></span>
+              <p className="text-sm text-gray-500">أو</p>
+              <span className="h-px w-16 bg-gray-200"></span>
+            </div>
+
+            <Button type="button" className="w-full py-3 flex items-center justify-center gap-2 bg-[#154b23] text-white hover:bg-[#0f3619] transition-colors rounded-lg">
+              <FcGoogle size={20} />
+              متابعة باستخدام جوجل
+            </Button>
+
+            <p className="text-center text-sm text-gray-600">
+              ليس لديك حساب؟{' '}
+              <Link to="/register" className="text-[#154b23] font-medium hover:underline">
+                إنشاء حساب
+              </Link>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
